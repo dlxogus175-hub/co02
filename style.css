@@ -1,0 +1,312 @@
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    color: #333;
+}
+
+.inner {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid #333;
+    border-radius: 50%;
+
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+.header {
+    border-bottom: 4px solid #FFE800;
+}
+
+.header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+.header .gnb>ul>li>a {
+    display: block;
+    line-height: 120px;
+    white-space: nowrap;
+}
+
+.header .gnb>ul>li {
+    position: relative;
+}
+
+.header .gnb>ul>li ul {
+    position: absolute;
+    top: 98px;
+    left: 50%;
+    transform: translate(-50%, 16px);
+    z-index: 4;
+
+    padding: 16px 0;
+    border-radius: 8px;
+
+    background: #FFE800;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.4s;
+}
+
+.header .gnb>ul>li:hover ul {
+
+    transform: translate(-50%, 0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.header .gnb>ul>li ul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 24px;
+    height: 24px;
+    background: #FFE800;
+    border: 4px solid #fff;
+
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.header .gnb>ul>li ul li a {
+    display: block;
+    white-space: nowrap;
+    padding: 0 24px;
+    line-height: 40px;
+    color: #000;
+    font-size: 14px;
+}
+
+.header .gnb>ul>li ul li a:hover {
+    color: #fff;
+}
+
+.header .gnb>ul>li ul li~li a {
+    border-top: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+
+
+
+.main_visual {
+    position: relative;
+    background: url(../images/airaa.jpg) no-repeat center center/cover;
+    height: 600px;
+
+    border-bottom: 2px solid #FFE800;
+}
+
+.main_visual::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #000;
+    opacity: 0.2;
+}
+
+.main_visual .inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 200px;
+    color: #fff;
+}
+
+
+.main_visual .slg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main_visual .slg h2 {
+    font-size: 64px;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+}
+
+.main_visual .slg p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+
+    margin-top: 16px;
+}
+
+
+
+
+
+.main_info {
+    padding: 60px 0;
+}
+
+.main_info .inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main_info .itm {
+    position: relative;
+    overflow: hidden;
+}
+
+.main_info .img_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main_info .itm01 {
+    height: 420px;
+}
+
+.main_info .bottom {
+    display: flex;
+    gap: 20px;
+}
+
+.main_info .bottom .itm {
+    flex: 1;
+    height: 420px;
+}
+
+.main_info .txt_box {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+}
+
+.main_info .txt_box strong {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 40px;
+}
+
+.main_info .txt_box p {
+    margin-top: 16px;
+    line-height: 24px;
+}
+
+.main_info .btn {
+    margin-top: 32px;
+}
+
+
+
+
+.main_banner {
+    position: relative;
+    background: url(../images/main_sec5.jpg) no-repeat center center/cover;
+    background-attachment: fixed;
+    height: 400px;
+}
+
+.main_banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    opacity: 0.5;
+}
+
+.main_banner .slg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    max-width: 1440px;
+    width: 100%;
+}
+
+.main_banner .slg h2 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.main_banner .slg p {
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+
+
+
+.footer {
+    padding: 60px 0;
+    background: #fff;
+    color: #333;
+    font-size: 14px;
+}
+
+.footer .ft_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #333;
+    padding-bottom: 24px;
+}
+
+.footer .ft_logo img {
+    height: 40px;
+}
+
+.footer .ft_menu {
+    display: flex;
+    gap: 24px;
+}
+
+.footer .ft_menu li a {
+    color: #333;
+}
+
+.footer .ft_info {
+    margin-top: 24px;
+    line-height: 24px;
+}
+
+.footer .copy {
+    margin-top: 24px;
+    font-size: 13px;
+    color: #666;
+}
